@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search</title>
+    <link rel="stylesheet" href="../static/css/emp.css">
+</head>
+<body background="../static/image/bgnew1.webp">
+    <header>
+        <div class="head-tag">
+            <a href="home">HOME</a>
+            <a href="create_task">ADD TASK</a>
+            <a href="view_task">VIEW TASK</a>
+         
+            <a href="logout">Logout</a>
+        </div>
+    </header>
+    <h1>Search task</h1>
+    <form action="searchresult" method="post">
+        <label>task status</label>
+        <select name="status" id="status">
+            <option value="Pending">Pending</option>
+            <option value="Processing">Processing</option>
+            <option value="Completed">Completed</option>
+        </select>
+        <br>
+        <br>
+        <input type="submit" value="Search">
+        <br>
+        {{msg}}
+    </form>
+</body>
+</html>

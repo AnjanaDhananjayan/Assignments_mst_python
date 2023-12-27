@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Home</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="../static/css/registrationstyle.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="center">
+          <h1>Register</h1>
+          <form action="registerdtl" method="POST">
+             
+            <div class="txt_field">
+                <input type="text" name="id" required>
+                <span></span>
+                <label>User Id</label>
+            </div>
+            <div class="txt_field">
+              <input type="text" name="fname" required>
+              <span></span>
+              <label>First Name</label>
+          </div>
+            <div class="txt_field">
+                <input type="text" name="lname" required>
+                <span></span>
+                <label>Last Name</label>
+            </div>
+              <div class="txt_field">
+                  <input type="email" name="email" required>
+                  <span></span>
+                  <label>Email</label>
+              </div>
+              <div class="txt_field">
+                <input type="tel" name="phonenumber" required>
+                <span></span>
+                <label>Phone Number</label>
+            </div>
+              <div class="txt_field">
+                  <input type="password" name="passwordd" required>
+                  <span></span>
+                  <label>Password</label>
+              </div>
+              <div class="txt_field">
+                  <input type="password" name="cpassword" required>
+                  <span></span>
+                  <label>Confirm Password</label>
+              </div>
+              <input name="submit" type="Submit" value="Sign Up">
+              <div class="signup_link">
+                  Have an Account ? <a href="login">Login Here</a>
+              </div>
+          </form>
+      </div>
+  </div>
+  </body>
+</html>

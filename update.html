@@ -1,0 +1,112 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>update task</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    
+</head>
+<body background="../static/image/bgnew1.webp">
+    <header>
+        <div class="head-tag">
+            <a href="home">HOME</a>
+            <a href="search">SEARCH</a>
+            <a href="create_task">ADD TASK</a>
+            <a href="view_task">VIEW TASK</a>
+         
+            <a href="logout">Logout</a>
+        </div>
+    </header>
+    <div class="center">
+    <h1>Update Task</h1>
+    <form action="/update_task1/{{update_data[0]}}" method="post">
+        <table>
+            <tr>
+                <td>
+                    Id
+                </td>
+                <td>
+                    <input name="id" type ="text" value="{{update_data[0]}}" >
+                </td>
+            <tr>
+                <td>
+                    Project Title
+                </td>
+                <td>
+                    <input name="project" type ="text" value="{{update_data[1]}}">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Task
+                </td>
+                <td>
+                    <input name="task" type ="text" value="{{update_data[2]}}">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Description
+                </td>
+                <td>
+                    <textarea name="description" rows="5" columns="33">{{update_data[3]}}</textarea>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Start Date
+                </td>
+                <td>
+                    <input name="cdate" type ="date" value="{{update_data[4]}}">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Due Date
+                </td>
+                <td>
+                    <input name="ddate" type ="date" value="{{update_data[5]}}">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Status
+                </td>
+                <td>
+                    <select name="status" id="status">
+                      
+                        {%if 'Pending'in update_data[6]%}
+                        <option value="update_data[status]">{{update_data[6]}}</option>
+                        <option value="Processing">Processing</option>
+                        <option value="Completed">Completed</option>
+                        {%endif%}
+                        
+                        {%if 'Processing' in update_data[6]%}
+                        <option value="update_data[status]">{{update_data[6]}}</option>
+                        <option value="Pending">Pending</option>
+                        <option value="Completed">Completed</option>
+                        {%endif%}
+                       
+                        {%if 'Completed' in update_data[6]%}
+                        <option value="update_data[status]">{{update_data[6]}}</option>
+                        <option value="Pending">Pending</option>
+                        <option value="Processing">Processing</option>
+                        {%endif%}
+                       
+                    </select>
+                </td>
+            </tr>
+            <tr>
+            <td></td>
+            <td><input name="submit" type="Submit" value="SUBMIT"></td>
+             </tr>
+          {{msg}}
+
+        </table>
+       
+    </form>
+
+</div>
+    
+</body>
+</html>

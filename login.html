@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TMS login</title>
+    <link rel="stylesheet" href="../static/css/login_style.css">
+</head>
+<body background="../static/image/logback1.jpg">
+    <form action="emp_login" method="POST">
+        <div id="login-form-wrap">
+            <h2>Login</h2>
+            <form id="login-form">
+              <p>
+              <input type="email" id="email" name="email" placeholder="Email Id" required><i class="validation"><span></span><span></span></i>
+              </p>
+              <p>
+              <input type="password" id="passwordd" name="passwordd" placeholder="Password" required><i class="validation"><span></span><span></span></i>
+              </p>
+              <p>
+              <input type="submit" id="login" value="Login">
+              </p>
+              {% if error %}
+              <p>{{error}}</p>
+              {% endif %}   
+            </form>
+            <div id="create-account-wrap">
+              <p>Not a member? <a href="register">Create Account</a></p>
+            </div><!--create-account-wrap-->
+          </div><!--login-form-wrap-->
+    </form>
+</body>
+</html>

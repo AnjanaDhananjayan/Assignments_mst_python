@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>View All</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+
+</head>
+<body background="../static/image/bgnew1.webp">
+    <header>
+        <div class="head-tag">
+            <a href="home">HOME</a>
+            <a href="search">SEARCH</a>
+            <a href="create">ADD TASK</a>
+            <a href="view_task">VIEW TASK</a>
+            <a href="logout">Logout</a>
+        </div>
+    </header>
+    <h3>Task Management System</h3>
+    <form action="view_task" method="POST">
+    <table border="1px">
+        <thead>
+            <tr>
+               
+                <th>Id</th>
+                <th>Projct Name</th>
+                <th>Task</th>
+                <th>Description</th>
+                <th>Create Date</th>
+                <th>Due Date</th>
+                <th>Status</th>
+                 <th></th>
+                 <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for i in sqldata %}
+        <tr>
+           
+            
+            <td>{{i[0]}}</td>
+            <td>{{i[1]}}</td>
+            <td>{{i[2]}}</td>
+            <td>{{i[3]}}</td>
+            <td>{{i[4]}}</td>
+            <td>{{i[5]}}</td>
+            <td>{{i[6]}}</td>
+            <td><button class="btn"><a href='delete_task/{{i[0]}}'>DELETE</a></button>
+            <button class="btn"><a href='update_task/{{i[0]}}'>UPDATE</a></button></td>
+            </tr>
+            {%endfor%}
+            
+        </tr>
+          
+            </tr>
+            
+          
+        </tbody>
+
+    </table>
+    <p>{{msg}}</p>
+</form>
+    
+</body>
+</html>
+
+</html>
