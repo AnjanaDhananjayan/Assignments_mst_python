@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>create_task</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    
+</head>
+<body background="../static/image/bgnew1.webp">
+    <header>
+        <div class="head-tag">
+            <a href="home">HOME</a>
+            <a href="search">SEARCH</a>
+            <a href="create_task">ADD TASK</a>
+            <a href="view_task">VIEW TASK</a>
+         
+            <a href="logout">Logout</a>
+        </div>
+    </header>
+    <div class="center">
+    <h1>ADD TASK</h1>
+    <form action="create_task" method="post">
+        <table>
+            <tr>
+                <td>
+                    Task Id
+                </td>
+                <td>
+                    <input name="id" type ="text" >
+                </td>
+            <tr>
+                <td>
+                    Project Title
+                </td>
+                <td>
+                    <input name="project" type ="text">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Task
+                </td>
+                <td>
+                    <input name="task" type ="text">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Description
+                </td>
+                <td>
+                    <textarea name="description" rows="5" columns="33"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Start Date
+                </td>
+                <td>
+                    <input name="cdate" type ="date">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Due Date
+                </td>
+                <td>
+                    <input name="ddate" type ="date">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Status
+                </td>
+                <td>
+                    <select name="status" id="status">
+                        <option value="Pending">Pending</option>
+                        <option value="Processing">Processing</option>
+                        <option value="Completed">Completed</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+            <td></td>
+            <td><input name="submit" type="Submit" value="SUBMIT"></td>
+             </tr>
+     
+
+        </table>
+        <p >{{msg}}</p>
+    </form>
+
+</div>
+    
+</body>
+</html>
